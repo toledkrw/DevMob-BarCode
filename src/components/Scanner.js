@@ -22,11 +22,11 @@ export default Scanner = () => {
     };
 
     if (hasPermission === null) {
-        return <Text>Solicito acesso a camera</Text>;
+        return <Text>Requires Camera access.</Text>;
     }
 
     if (hasPermission === false) {
-        return <Text>Sem acesso a camera</Text>;
+        return <Text>Have no Camera access.</Text>;
     }
 
 
@@ -37,7 +37,7 @@ export default Scanner = () => {
                 style={StyleSheet.absoluteFillObject}
             />
             <View style={{ margin: 20, position: 'absolute', bottom: 10 }}>
-                <Button title={'Clique para escanear'} onPress={() => setScanned(false)} />
+                <Button title={'Press to scan'} onPress={() => setScanned(false)} />
             </View>
         </View>
     )
